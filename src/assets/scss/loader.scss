@@ -1,0 +1,128 @@
+@import "style";
+
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  place-items: center;
+  background: $first-color;
+  z-index: 99;
+
+  &__box {
+    position: relative;
+    width: 500px;
+    height: 500px;
+
+    @media (max-width: 768px) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media (max-width: 320px) {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  &__images {
+    width: 100%;
+    right: 50%;
+    display: grid;
+    place-items: center;
+
+    &-img {
+      position: absolute;
+      width: 150px;
+      top: 10%;
+      opacity: 0;
+
+      @media (max-width: 768px) {
+        width: 100px;
+      }
+
+      @media (max-width: 768px) {
+        top: 0;
+      }
+    }
+
+    &-img1 {
+      animation: fade-in-out 1s linear;
+    }
+
+    &-img2 {
+      animation: fade-in-out 1s linear;
+      animation-delay: 1.25s;
+    }
+
+    &-img3{
+      animation: fade-in-out 1s linear;
+      animation-delay: 2.5s;
+    }
+
+    &-img4 {
+      animation: fade-in-out 1s linear;
+      animation-delay: 3.75s;
+    }
+
+    &-img5 {
+      animation: fade-in-out 1s linear;
+      animation-delay: 5s;
+    }
+
+    &-img6 {
+      animation: fade-in-out 1s linear;
+      animation-delay: 6.25s;
+    }
+
+    @keyframes fade-in-out {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    width: 90%;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    background: $first-color-lighten;
+
+    &-in {
+      width: 50%;
+      height: 100%;
+      border-radius: 2px;
+      background: $first-color-alt;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    display: grid;
+    place-items: center;
+    font-family: $secondary-font;
+    font-size: 30px;
+    font-weight: 700;
+    color: $first-color-alt;
+
+    @media (max-width: 768px) {
+      top: 65%;
+    }
+  }
+}

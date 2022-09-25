@@ -1,0 +1,8 @@
+import '../scss/style.scss'
+import '../scss/loader.scss'
+import '../scss/home.scss'
+import '../scss/nav.scss'
+import '../scss/about.scss'
+import '../scss/step.scss'
+import '../scss/contact.scss'
+import '../scss/footer.scss'
