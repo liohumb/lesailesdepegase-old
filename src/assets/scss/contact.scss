@@ -1,5 +1,114 @@
 @import "style";
 
 .contact {
-  background: $first-color;
+  display: grid;
+  place-items: center;
+  background: linear-gradient($background-color, $first-color-alt);
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6rem;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &Icon {
+        width: 75px;
+        height: 75px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: $first-color;
+        color: $background-color;
+        font-size: 35px;
+      }
+
+      &Info {
+        font-family: $primary-font;
+        font-size: 17px;
+        font-weight: 600;
+        margin: 1rem 0 0 0;
+
+        a {
+          color: $first-color;
+        }
+      }
+    }
+  }
+
+  &__form {
+    width: 66%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: $background-color;
+
+    &-content {
+      width: 60%;
+      height: 100%;
+      padding: 4rem;
+    }
+
+    &-button {
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      font-family: $primary-font;
+      font-size: 17px;
+      font-weight: 600;
+      color: $first-color;
+      cursor: pointer;
+
+      & span {
+        transition: transform .75s cubic-bezier(.51,.92,.24,1.15);
+      }
+
+      &:hover span {
+        transform: translate3d(0, -150%, 0);
+      }
+
+      &:after {
+        content: attr(data-text);
+        position: absolute;
+        height: 100%;
+        top: 0;
+        color: $first-color-alt;
+        transform: translate3d(0, 150%, 0);
+        transition: transform .75s cubic-bezier(.51,.92,.24,1.15);
+      }
+
+      &:hover:after {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    
+    &-img {
+      width: 40%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 15px 15px 0;
+      }
+    }
+  }
 }

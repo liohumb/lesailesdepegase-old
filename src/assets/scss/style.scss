@@ -66,6 +66,11 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  background: transparent;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -76,4 +81,62 @@ ul {
 .section {
   width: 100%;
   height: 100vh;
+}
+
+//form
+.form__inputs {
+  display: grid;
+  row-gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.form__content {
+  position: relative;
+  height: 3rem;
+  border-bottom: 1px solid $first-color-light;
+}
+
+.form__input {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  background: none;
+  color: $text-color;
+  border: none;
+  outline: none;
+  padding: 1rem 1rem 1rem 0;
+  z-index: 1;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-size: 18px;
+  color: $first-color;
+  transition: .3s;
+}
+
+.form__area {
+  height: 10rem;
+}
+
+.form__area textarea {
+  resize: none;
+}
+
+.form__input:focus + .form__label {
+  top: -.75rem;
+  left: 0;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  top: -.75rem;
+  font-size: 12px;
+  z-index: 10;
 }

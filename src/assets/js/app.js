@@ -75,6 +75,10 @@ function toggleModal() {
     }
 }
 
+window.addEventListener('scroll', function () {
+    modal.classList.remove('modal__active')
+})
+
 /*  ABOUT GALLERY  */
 //cards
 const swiperCards = new Swiper(".about__gallery-cards", {

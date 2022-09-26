@@ -110,6 +110,7 @@
   height: 95vh;
   top: 0;
   opacity: 0;
+  z-index: 2;
   transform: translateY(-110%);
   transition: 1.25s cubic-bezier(.91,.52,.24,1.15);
 

@@ -603,6 +603,9 @@ function toggleModal() {
         button.classList.remove("bx-rotate-180");
     }
 }
+window.addEventListener("scroll", function() {
+    modal.classList.remove("modal__active");
+});
 /*  ABOUT GALLERY  */ //cards
 const swiperCards = new (0, _swiperBundleMinJsDefault.default)(".about__gallery-cards", {
     loop: true,
