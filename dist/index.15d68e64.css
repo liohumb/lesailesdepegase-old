@@ -1235,7 +1235,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8rem;
+  padding: 6rem;
   display: flex;
 }
 
@@ -1394,13 +1394,33 @@ ul {
   transform: scale(1.2);
 }
 
+.step__content-end {
+  margin: 30rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .step__content-end {
+    margin: 0;
+  }
+}
+
 .step__cards {
   flex-warp: warp;
   justify-content: center;
   align-items: center;
   padding: 8rem 0 0;
   display: flex;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .step__cards {
+    position: relative;
+    left: 0;
+    transform: translateX(0);
+  }
 }
 
 .step__cards-card {
@@ -1413,8 +1433,16 @@ ul {
   padding: 20px 15px;
   transition: all .5s ease-in-out;
   display: flex;
-  position: relative;
+  position: absolute;
+  top: 100%;
   box-shadow: 0 5px 20px #00000080;
+}
+
+@media (max-width: 768px) {
+  .step__cards-card {
+    position: relative;
+    top: 0;
+  }
 }
 
 .step__cards-card:hover {
@@ -1428,8 +1456,28 @@ ul {
   transition-delay: .2s;
 }
 
+.step__cards-card:nth-child(1) {
+  transform: translateX(-105%);
+}
+
+@media (max-width: 768px) {
+  .step__cards-card:nth-child(1) {
+    transform: translateX(0);
+  }
+}
+
 .step__cards-card:nth-child(2) p {
   margin: 2rem 0 0;
+}
+
+.step__cards-card:nth-child(3) {
+  transform: translateX(105%);
+}
+
+@media (max-width: 768px) {
+  .step__cards-card:nth-child(3) {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1666,8 +1714,23 @@ ul {
   height: 100%;
   justify-content: space-around;
   align-items: center;
-  padding: 6rem;
+  padding: 6rem 2rem;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .contact__header {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    display: grid;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact__header {
+    gap: 2rem;
+    padding: 4rem 2rem;
+  }
 }
 
 .contact__header-content {
@@ -1687,11 +1750,39 @@ ul {
   display: grid;
 }
 
+@media (max-width: 768px) {
+  .contact__header-contentIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact__header-contentIcon {
+    width: 75px;
+    height: 75px;
+    font-size: 40px;
+  }
+}
+
 .contact__header-contentInfo {
   margin: 1rem 0 0;
   font-family: Poppins, sans-serif;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contact__header-contentInfo {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact__header-contentInfo {
+    display: none;
+  }
 }
 
 .contact__header-contentInfo a {
@@ -1699,7 +1790,7 @@ ul {
 }
 
 .contact__form {
-  width: 66%;
+  width: 75%;
   height: 100%;
   background: #e8f3f2;
   border-radius: 15px;
@@ -1708,10 +1799,49 @@ ul {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .contact__form {
+    width: 85%;
+    flex-direction: column;
+  }
+}
+
+.contact__form-background {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .contact__form-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    display: block;
+  }
+}
+
 .contact__form-content {
   width: 60%;
   height: 100%;
   padding: 4rem;
+}
+
+@media (max-width: 768px) {
+  .contact__form-content {
+    width: 100%;
+    height: 100%;
+    padding: 4rem 2rem;
+  }
+
+  .contact__form-content form {
+    display: grid;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact__form-content {
+    padding: 3rem 1rem 0;
+  }
 }
 
 .contact__form-button {
@@ -1724,6 +1854,20 @@ ul {
   display: grid;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .contact__form-button {
+    padding: 0;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact__form-button {
+    padding: 2rem;
+    font-size: 17px;
+  }
 }
 
 .contact__form-button span {
@@ -1751,12 +1895,13 @@ ul {
 .contact__form-img {
   width: 40%;
   height: 100%;
+  border-radius: 0 15px 15px 0;
 }
 
-.contact__form-img img {
-  width: 100%;
-  height: 100%;
-  border-radius: 0 15px 15px 0;
+@media (max-width: 768px) {
+  .contact__form-img {
+    display: none;
+  }
 }
 
 * {
