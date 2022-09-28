@@ -1,0 +1,368 @@
+@import "style";
+
+.modal__about-button {
+  position: absolute;
+  width: 210px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  background: $background-color;
+  border-radius: 10px;
+  transition: transform .5s ease-in-out;
+  overflow: hidden;
+  font-family: $primary-font;
+  font-size: 22px;
+  font-weight: 600;
+  color: $first-color;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    padding: 0;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 17px;
+    padding: 2rem;
+  }
+
+  & span {
+    transition: transform .75s cubic-bezier(.51,.92,.24,1.15);
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:hover span {
+    transform: translate3d(0, -150%, 0);
+  }
+
+  &:after {
+    content: attr(data-text);
+    position: absolute;
+    height: 100%;
+    top: 0;
+    color: $first-color-alt;
+    transform: translate3d(0, 150%, 0);
+    transition: transform .75s cubic-bezier(.51,.92,.24,1.15);
+  }
+
+  &:hover:after {
+    transform: translate3d(0, 20%, 0);
+  }
+}
+
+.modal__about-buttonClose {
+  position: absolute;
+  top: 7%;
+  left: 7%;
+  display: flex;
+  align-items: center;
+  font-family: $secondary-font;
+  font-size: 22px;
+  color: $background-color;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 33%;
+    height: 2px;
+    left: 40%;
+    bottom: 0;
+    background: $background-color;
+    transition: 1s ease-in-out;
+  }
+
+  &:hover:after {
+    left: 45%;
+    transform: scale3d(1.75, 1, 1);
+  }
+
+  i {
+    margin: 0 0 -2px 0;
+  }
+}
+
+.modal__about {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transform: translateX(-150%);
+  transition: all 1s ease-in-out;
+  z-index: -100;
+  background: $text-color;
+
+  &-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    gap: 2rem;
+    padding: 2rem 20%;
+  }
+
+  &-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0 4px 16px,
+                rgba(17, 17, 26, 0.1) 0 8px 24px,
+                rgba(17, 17, 26, 0.1) 0 16px 56px;
+    cursor: zoom-in;
+    overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+
+      div {
+        opacity: .4;
+      }
+
+      h3 {
+        letter-spacing: -.05rem;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      transition: transform 1s ease-in-out;
+    }
+
+    div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      background: $text-color;
+      opacity: .6;
+      transition: opacity 1s ease-in-out;
+    }
+
+    h3 {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      font-family: $secondary-font;
+      font-size: 32px;
+      font-weight: 600;
+      color: $background-color;
+      text-transform: uppercase;
+      letter-spacing: -.17rem;
+      transition: letter-spacing 1s ease-in-out;
+    }
+  }
+
+  .card__what {
+    grid-area: 1 / 3 / 1 / 1;
+    h3 {
+      font-size: 25px;
+    }
+  }
+
+  .card__who {
+    grid-area: 1 / 3 / 2 / 3;
+  }
+
+  .card__for {
+    grid-area: 4 / 2 / 2 / 1;
+  }
+
+  .card__horse {
+    grid-area: 3 / 4 / 2 / 2;
+  }
+
+  .card__cat {
+    grid-area: 4 / 3 / 3 / 2;
+  }
+
+  .card__dog {
+    grid-area: 4 / 4 / 3 / 3;
+  }
+
+  .card__bunny {
+    grid-area: 5 / 4 / 4 / 1;
+  }
+}
+
+.modal__about-active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 100;
+}
+
+.modal__more {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  overflow-y: scroll;
+  transition: all 1s ease-in-out;
+  z-index: -100;
+  background: $text-color;
+}
+
+.modal__what-active,
+.modal__who-active,
+.modal__for-active,
+.modal__horse-active,
+.modal__cat-active,
+.modal__dog-active,
+.modal__bunny-active {
+  opacity: 1;
+  z-index: 200;
+}
+
+.modal__more {
+  background: $first-color-alt;
+  margin: 0;
+  padding: 0 0 15px;
+
+  &-close {
+    position: fixed;
+    top: 8.5%;
+    left: 11%;
+    display: flex;
+    align-items: center;
+    font-family: $secondary-font;
+    font-size: 22px;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 33%;
+      height: 2px;
+      left: 40%;
+      bottom: 0;
+      background: #000;
+      transition: 1s ease-in-out;
+    }
+
+    &:hover:after {
+      left: 45%;
+      transform: scale3d(1.75, 1, 1);
+    }
+
+    i {
+      margin: 0 0 -2px 0;
+    }
+  }
+
+  &-container {
+    padding: 30px 0;
+
+    article {
+      margin: auto;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-gap: 1.5em;
+
+      h1, cite, img, aside, main {
+        grid-column: 2;
+      }
+
+      main {
+        max-width: 450px;
+        margin: auto;
+        text-align: justify;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1 {
+        text-align: center;
+        span {
+          display: block;
+        }
+
+        .focusing {
+          font-family: $secondary-font;
+          text-transform: uppercase;
+          font-size: 2.2em;
+          margin-bottom: -15px;
+        }
+
+        .the {
+          font-family: $primary-font;
+          text-transform: uppercase;
+          font-size: 0.75em;
+          transform: translateY(50%);
+          background: $first-color-alt;
+          width: 50px;
+          margin: auto;
+        }
+
+        .heart {
+          font-family: $secondary-font;
+          text-transform: uppercase;
+          font-size: 3em;
+          border: thin solid black;
+          border-width: thin 0;
+          padding: 10px 0 0;
+        }
+      }
+
+      cite {
+        font-family: $secondary-font;
+        font-style: normal;
+        text-transform: uppercase;
+        text-align: center;
+
+        .name {
+          font-weight: 900;
+        }
+      }
+
+      aside {
+        font-family: $secondary-font;
+        font-style: italic;
+        text-align: right;
+        grid-column: 1;
+        grid-row: 3;
+        margin-top: 7em;
+      }
+
+      main {
+        font-family: $primary-font;
+        margin: 0;
+
+        .dropcap {
+          font-family: $primary-font;
+          text-transform: uppercase;
+          font-size: 0.9em;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+  }
+}

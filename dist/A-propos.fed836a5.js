@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"fHzeq":[function(require,module,exports) {
+})({"3Hv0c":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "443788173edf765f";
+module.bundle.HMR_BUNDLE_ID = "13d73b3cfed836a5";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -531,17 +531,8 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"fxZy5":[function(require,module,exports) {
-var _styleScss = require("../scss/style.scss");
-var _loaderScss = require("../scss/loader.scss");
-var _homeScss = require("../scss/home.scss");
-var _navScss = require("../scss/nav.scss");
-var _aboutScss = require("../scss/about.scss");
-var _modalScss = require("../scss/modal.scss");
-var _stepScss = require("../scss/step.scss");
-var _contactScss = require("../scss/contact.scss");
-var _footerScss = require("../scss/footer.scss");
+},{}],"2iYG0":[function(require,module,exports) {
 
-},{"../scss/style.scss":"bQ6jc","../scss/loader.scss":"2t900","../scss/nav.scss":"j40zG","../scss/about.scss":"jedLi","../scss/home.scss":"44ikt","../scss/step.scss":"zJKBF","../scss/contact.scss":"3gHSU","../scss/footer.scss":"hnKwl","../scss/modal.scss":"dZaPe"}],"bQ6jc":[function() {},{}],"2t900":[function() {},{}],"j40zG":[function() {},{}],"jedLi":[function() {},{}],"44ikt":[function() {},{}],"zJKBF":[function() {},{}],"3gHSU":[function() {},{}],"hnKwl":[function() {},{}],"dZaPe":[function() {},{}]},["fHzeq","fxZy5"], "fxZy5", "parcelRequirec042")
+},{}]},["3Hv0c","2iYG0"], "2iYG0", "parcelRequirec042")
 
-//# sourceMappingURL=index.3edf765f.js.map
+//# sourceMappingURL=A-propos.fed836a5.js.map
