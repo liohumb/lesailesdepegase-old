@@ -828,7 +828,14 @@ ul {
 .about__gallery {
   width: 100%;
   place-content: center;
+  padding: 5rem 0 0;
   display: grid;
+}
+
+@media (max-width: 768px) {
+  .about__gallery {
+    padding: 0;
+  }
 }
 
 .about__gallery-cards {
@@ -920,8 +927,24 @@ ul {
 .about__modals {
   width: 100%;
   height: 100%;
-  position: absolute;
-  transform: translate(42%, 82%);
+  padding: 4rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .about__modals {
+    place-items: center;
+    display: grid;
+  }
+}
+
+@media (max-width: 375px) {
+  .about__modals .modal__about-button {
+    padding: 0;
+  }
+
+  .about__modals .modal__about-button:after {
+    height: 130%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2181,10 +2204,10 @@ ul {
   display: flex;
   position: absolute;
   top: 7%;
-  left: 7%;
+  left: 4%;
 }
 
-.modal__about-buttonClose:after {
+.modal__about-buttonClose span:after {
   content: "";
   width: 33%;
   height: 2px;
@@ -2195,13 +2218,23 @@ ul {
   left: 40%;
 }
 
-.modal__about-buttonClose:hover:after {
+.modal__about-buttonClose span:hover:after {
   left: 45%;
   transform: scale3d(1.75, 1, 1);
 }
 
 .modal__about-buttonClose i {
   margin: 0 0 -2px;
+}
+
+@media (max-width: 768px) {
+  .modal__about-buttonClose {
+    font-size: 30px;
+  }
+
+  .modal__about-buttonClose span {
+    display: none;
+  }
 }
 
 .modal__about {
@@ -2225,6 +2258,16 @@ ul {
   gap: 2rem;
   padding: 2rem 20%;
   display: grid;
+}
+
+@media (max-width: 768px) {
+  .modal__about-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 15%;
+    display: flex;
+  }
 }
 
 .modal__about-card {
@@ -2276,6 +2319,7 @@ ul {
 .modal__about-card h3 {
   width: 100%;
   height: 100%;
+  text-align: center;
   color: #e8f3f2;
   text-transform: uppercase;
   letter-spacing: -.17rem;
@@ -2293,7 +2337,13 @@ ul {
 }
 
 .modal__about .card__what h3 {
-  font-size: 25px;
+  font-size: 27px;
+}
+
+@media (max-width: 768px) {
+  .modal__about .card__what h3 {
+    font-size: 22px;
+  }
 }
 
 .modal__about .card__who {
@@ -2346,7 +2396,13 @@ ul {
 .modal__more {
   background: #cab081;
   margin: 0;
-  padding: 0 0 15px;
+  padding: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .modal__more {
+    padding: 0 0 15px;
+  }
 }
 
 .modal__more-close {
@@ -2356,11 +2412,11 @@ ul {
   font-size: 22px;
   display: flex;
   position: fixed;
-  top: 8.5%;
-  left: 11%;
+  top: 13%;
+  left: 6%;
 }
 
-.modal__more-close:after {
+.modal__more-close span:after {
   content: "";
   width: 33%;
   height: 2px;
@@ -2371,13 +2427,31 @@ ul {
   left: 40%;
 }
 
-.modal__more-close:hover:after {
+.modal__more-close span:hover:after {
   left: 45%;
   transform: scale3d(1.75, 1, 1);
 }
 
 .modal__more-close i {
   margin: 0 0 -2px;
+}
+
+@media (max-width: 768px) {
+  .modal__more-close {
+    font-size: 27px;
+    top: 7%;
+    left: 3%;
+  }
+
+  .modal__more-close span {
+    display: none;
+  }
+}
+
+@media (max-width: 475px) {
+  .modal__more-close {
+    left: 0;
+  }
 }
 
 .modal__more-container {
@@ -2392,18 +2466,16 @@ ul {
   display: grid;
 }
 
-.modal__more-container article h1, .modal__more-container article cite, .modal__more-container article img, .modal__more-container article aside, .modal__more-container article main {
+@media (max-width: 768px) {
+  .modal__more-container article {
+    grid-gap: .5em;
+    grid-template-columns: auto 1fr auto;
+    padding: 0 10%;
+  }
+}
+
+.modal__more-container article h1, .modal__more-container article img, .modal__more-container article aside, .modal__more-container article main {
   grid-column: 2;
-}
-
-.modal__more-container article main {
-  max-width: 450px;
-  text-align: justify;
-  margin: auto;
-}
-
-.modal__more-container article img {
-  width: 100%;
 }
 
 .modal__more-container article h1 {
@@ -2440,15 +2512,24 @@ ul {
   font-size: 3em;
 }
 
-.modal__more-container article cite {
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Spectral, serif;
-  font-style: normal;
+@media (max-width: 768px) {
+  .modal__more-container article h1 .focusing {
+    font-size: 1em;
+  }
+
+  .modal__more-container article h1 .heart {
+    font-size: 2em;
+  }
 }
 
-.modal__more-container article cite .name {
-  font-weight: 900;
+.modal__more-container article img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .modal__more-container article img {
+    padding: 1rem 0;
+  }
 }
 
 .modal__more-container article aside {
@@ -2459,9 +2540,23 @@ ul {
   font-style: italic;
 }
 
+@media (max-width: 768px) {
+  .modal__more-container article aside {
+    display: none;
+  }
+}
+
 .modal__more-container article main {
+  max-width: 450px;
+  text-align: justify;
   margin: 0;
   font-family: Poppins, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .modal__more-container article main {
+    margin: auto;
+  }
 }
 
 .modal__more-container article main .dropcap {
