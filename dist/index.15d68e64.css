@@ -478,7 +478,7 @@ ul {
   top: -.75rem;
 }
 
-.nav {
+.nav, .nav__reservation {
   width: 100%;
   height: 75px;
   text-align-last: center;
@@ -493,39 +493,39 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .nav {
+  .nav, .nav__reservation {
     display: none;
   }
 }
 
-.nav__bottom {
+.nav__bottom, .nav__reservation__bottom {
   position: absolute;
   bottom: 0;
 }
 
-.nav__top {
+.nav__top, .nav__reservation__top {
   position: fixed;
   top: 0;
 }
 
-.nav__logo {
+.nav__logo, .nav__reservation__logo {
   width: 25%;
   place-items: center;
   display: grid;
 }
 
-.nav__logo img {
+.nav__logo img, .nav__reservation__logo img {
   height: 70px;
 }
 
-.nav__menu {
+.nav__menu, .nav__reservation__menu {
   width: 60%;
   justify-content: space-evenly;
   align-items: center;
   display: flex;
 }
 
-.nav__menu-link {
+.nav__menu-link, .nav__reservation__menu-link {
   color: #2b5553;
   place-items: center;
   font-family: Poppins, sans-serif;
@@ -536,15 +536,15 @@ ul {
   overflow: hidden;
 }
 
-.nav__menu-link span {
+.nav__menu-link span, .nav__reservation__menu-link span {
   transition: transform .75s cubic-bezier(.51, .92, .24, 1.15);
 }
 
-.nav__menu-link:hover span {
+.nav__menu-link:hover span, .nav__reservation__menu-link:hover span {
   transform: translate3d(-150%, 0, 0);
 }
 
-.nav__menu-link:after {
+.nav__menu-link:after, .nav__reservation__menu-link:after {
   content: attr(data-text);
   height: 100%;
   color: #cab081;
@@ -554,37 +554,38 @@ ul {
   transform: translate3d(150%, 0, 0);
 }
 
-.nav__menu-link:hover:after {
+.nav__menu-link:hover:after, .nav__reservation__menu-link:hover:after {
   transform: translate3d(0, 0, 0);
 }
 
 @media (max-width: 1024px) {
-  .nav__menu-link {
+  .nav__menu-link, .nav__reservation__menu-link {
     padding: 0 1rem;
     font-size: 15px;
   }
 }
 
-.nav__social {
+.nav__social, .nav__reservation__social {
   width: 15%;
   justify-content: space-evenly;
   align-items: center;
   display: flex;
 }
 
-.nav__social-link {
+.nav__social-link, .nav__reservation__social-link {
   color: #4f9c98;
   font-size: 30px;
+  transition: color .75s ease-in-out;
 }
 
 @media (max-width: 1024px) {
-  .nav__social-link {
+  .nav__social-link, .nav__reservation__social-link {
     padding: 0 1rem;
     font-size: 25px;
   }
 }
 
-.nav__social-link:hover {
+.nav__social-link:hover, .nav__reservation__social-link:hover {
   color: #cab081;
 }
 
@@ -1704,6 +1705,63 @@ ul {
   display: grid;
 }
 
+.contact__title {
+  color: #2b5553;
+  text-align: center;
+  font-family: Spectral, serif;
+  font-size: 57px;
+  font-weight: 600;
+}
+
+.contact__title br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .contact__title br {
+    display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  .contact__title {
+    font-size: 44px;
+  }
+}
+
+.contact__subtitle {
+  color: #79a4a2;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.contact__subtitle span br {
+  display: none;
+}
+
+@media (max-width: 425px) {
+  .contact__subtitle span br {
+    display: block;
+  }
+
+  .contact__subtitle span {
+    display: none;
+  }
+}
+
+.contact__subtitle br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .contact__subtitle br {
+    display: block;
+  }
+}
+
 .contact__container {
   width: 100%;
   height: 100%;
@@ -2759,8 +2817,8 @@ ul {
 
 .modal__more-container article aside {
   text-align: right;
-  grid-area: 3 / 1;
-  margin-top: 7em;
+  grid-area: 2 / 1;
+  margin-top: 19em;
   font-family: Spectral, serif;
   font-style: italic;
 }

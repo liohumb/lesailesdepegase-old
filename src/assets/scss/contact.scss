@@ -5,6 +5,57 @@
   place-items: center;
   background: linear-gradient($background-color, $first-color-light);
 
+  &__title {
+    font-family: $secondary-font;
+    font-size: 57px;
+    font-weight: 600;
+    color: $text-color;
+    text-align: center;
+
+    br {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+    
+    @media (max-width: 425px) {
+      font-size: 44px;
+    }
+  }
+
+  &__subtitle {
+    font-family: $primary-font;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    color: $text-color-light;
+    text-align: center;
+
+    span {
+      br {
+        display: none;
+
+        @media (max-width: 425px) {
+          display: block;
+        }
+      }
+
+      @media (max-width: 425px) {
+        display: none;
+      }
+    }
+
+    br {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
   &__container {
     width: 100%;
     height: 100%;
