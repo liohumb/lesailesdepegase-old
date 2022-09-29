@@ -1699,7 +1699,7 @@ ul {
 }
 
 .contact {
-  background: linear-gradient(#e8f3f2, #cab081);
+  background: linear-gradient(#e8f3f2, #9ad0cd);
   place-items: center;
   display: grid;
 }
@@ -2022,8 +2022,233 @@ ul {
 
 .footer {
   width: 100%;
-  height: 200px;
-  background: #cab081;
+  height: 100%;
+  background: #9ad0cd;
+  place-items: center;
+  padding: 10rem 10% 2rem;
+  display: grid;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 6rem 0;
+  }
+}
+
+.footer__logo {
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  display: grid;
+}
+
+.footer__logo img {
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .footer__logo img {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__logo img {
+    width: 90%;
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer__logo img {
+    width: 100%;
+  }
+}
+
+.footer__container {
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.footer__container-left, .footer__container-center {
+  width: 33%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .footer__container-left, .footer__container-center {
+    width: 100%;
+  }
+}
+
+.footer__container-left ul {
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .footer__container-left ul {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    display: grid;
+  }
+}
+
+.footer__container-left ul li {
+  color: #2b5553;
+  padding: .5rem 0;
+  font-family: Spectral, serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@media (max-width: 320px) {
+  .footer__container-left ul li {
+    font-size: 17px;
+  }
+}
+
+.footer__container-left ul li a {
+  transition: color .7s ease-in-out;
+}
+
+.footer__container-left ul li a:hover {
+  color: #4f9c98;
+}
+
+@media (max-width: 768px) {
+  .footer__container-center {
+    padding: 4rem 0;
+  }
+}
+
+.footer__container-center ul {
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  display: grid;
+}
+
+@media (max-width: 1024px) {
+  .footer__container-center ul {
+    width: auto;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__container-center ul {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer__container-center ul {
+    width: auto;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.footer__container-center ul li {
+  width: 50px;
+  height: 50px;
+  background: #2b5553;
+  border-radius: 50%;
+  transition: background .7s ease-in-out;
+}
+
+.footer__container-center ul li a {
+  width: 100%;
+  height: 100%;
+  color: #e8f3f2;
+  place-items: center;
+  font-size: 25px;
+  transition: transform .7s ease-in-out;
+  display: grid;
+}
+
+.footer__container-center ul li a:hover {
+  transform: scale(1.2);
+}
+
+.footer__container-center ul li:hover {
+  background: #4f9c98;
+}
+
+.footer__container-right {
+  width: 33%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .footer__container-right {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.footer__container-right h3 {
+  text-transform: uppercase;
+  color: #4f9c98;
+  margin: 0 0 1rem;
+  font-family: Spectral, serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.footer__container-right ul li {
+  padding: .5rem 0;
+}
+
+.footer__name {
+  text-align: center;
+  color: #2b5553;
+  letter-spacing: 1px;
+  padding: 2rem 0 0;
+  font-family: Spectral, serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.footer__name span {
+  color: #4f9c98;
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.footer__name span a {
+  border-bottom: 1px solid #cab081;
 }
 
 * {
@@ -2505,8 +2730,8 @@ ul {
 
 .modal__more-container article h1 .heart {
   text-transform: uppercase;
-  border: thin solid #000;
-  border-width: thin 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   padding: 10px 0 0;
   font-family: Spectral, serif;
   font-size: 3em;
