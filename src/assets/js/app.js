@@ -17,17 +17,17 @@ let barInterval = setInterval(() => {
         clearInterval(barInterval)
         // loader disappear
         gsap.to('.loader', {
-            duration: 2.55,
-            delay: 2.25,
+            duration: 2,
+            delay: 1,
             background: 'transparent',
             display: 'none'
         })
         gsap.to('.loader__bar', {
-            duration: 1.5,
+            duration: 1,
             opacity: 0
         })
         gsap.to('.loader__count', {
-            duration: .75,
+            duration: .5,
             opacity: 0
         })
         gsap.to('.nav__bottom', {
@@ -41,7 +41,7 @@ let barInterval = setInterval(() => {
             bottom: 0
         })
     }
-}, 50)
+}, 40)
 
 /*  HOME VIDEO BACKGROUND  */
 //force play

@@ -63,21 +63,21 @@
         </div>
     </section>
     <!--HOME-->
-    <section class="home section">
+    <section class="home section" id="home">
         <!--navbar-->
         <nav class="nav nav__bottom">
-            <a href="/" class="nav__logo">
+            <a href="#home" class="nav__logo">
                 <img src="/logo.0886484d.png" alt="logo des ailes de Pégase">
             </a>
             <ul class="nav__menu">
                 <li>
-                    <a href="#" class="nav__menu-link" data-text="À propos"><span>À propos</span></a>
+                    <a href="#about" class="nav__menu-link" data-text="À propos"><span>À propos</span></a>
                 </li>
                 <li>
-                    <a href="#" class="nav__menu-link" data-text="La médiation"><span>La médiation</span></a>
+                    <a href="#step" class="nav__menu-link" data-text="La médiation"><span>La médiation</span></a>
                 </li>
                 <li>
-                    <a href="#" class="nav__menu-link" data-text="Contact"><span>Contact</span></a>
+                    <a href="#contact" class="nav__menu-link" data-text="Contact"><span>Contact</span></a>
                 </li>
             </ul>
             <ul class="nav__social">
@@ -100,16 +100,16 @@
             <div class="modal__content">
                 <ul class="modal__content-menu">
                     <li>
-                        <a href="/" class="modal-content-menuLink">Accueil</a>
+                        <a href="#home" class="modal-content-menuLink">Accueil</a>
                     </li>
                     <li>
-                        <a href="#" class="modal-content-menuLink">À propos</a>
+                        <a href="#about" class="modal-content-menuLink">À propos</a>
                     </li>
                     <li>
-                        <a href="#" class="modal-content-menuLink">La médiation</a>
+                        <a href="#step" class="modal-content-menuLink">La médiation</a>
                     </li>
                     <li>
-                        <a href="#" class="modal-content-menuLink">Contact</a>
+                        <a href="#contact" class="modal-content-menuLink">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -138,11 +138,11 @@
         </nav>
         <!--background video-->
         <video id="home__video" muted="">
-            <source src="/background_alt.99011c8a.mp4" type="video/mp4">
+            <source src="/background.fdeb1243.mp4" type="video/mp4">
         </video>
     </section>
     <!--ABOUT-->
-    <section class="about">
+    <section class="about" id="about">
         <div class="about__container">
             <div class="about__gallery">
                 <div class="about__gallery-cards swiper">
@@ -207,7 +207,7 @@
                 </div>
             </div>
             <div class="about__infos">
-                <h2 class="about__infos-title">Qu'est ce que les ailes de Pégase ?</h2>
+                <h2 class="about__infos-title">Qu'est-ce que les ailes de Pégase ?</h2>
                 <p class="about__infos-text">La médiation animale met en relation l'homme et l'animal à travers des activités adaptées qui permettent de travailler
                     et d'améliorer des aspects physiques, psychomoteurs, cognitifs, sociaux... Je vous propose des activités sur-mesure de médiation animale et
                     d'animation pédagogique individuelle ou en petit groupe (entre 3 à 8 personnes). Je travaille en itinérance avec chien et chat sur la métropole
@@ -455,7 +455,7 @@
                         <main>
                             <p>Laissez moi vous présenter les <span class="dropcap">deux frères</span> lapin nain !</p>
                             <br>
-                            <p>Voici les deux plus petits qui m'accompagnent en séance</p>
+                            <p>Voici les deux plus petits qui m'accompagnent en séance.</p>
                             <br>
                             <p>Deux lapins nains très curieux & gourmands, prêts à vous aider et à vous faire partager de nouvelles découvertes.</p>
                         </main>
@@ -465,7 +465,7 @@
         </div>
     </section>
     <!--STEP-->
-    <section class="step">
+    <section class="step" id="step">
         <div class="step__container">
             <div class="step__content">
                 <h1 class="step__content-title">Votre médiation animale</h1>
@@ -535,7 +535,7 @@
         </div>
     </section>
     <!--CONTACT-->
-    <section class="contact">
+    <section class="contact" id="contact">
         <h1 class="contact__title">Contactez moi <br>dès à présent !</h1>
         <span class="contact__subtitle">Pour toutes informations<span>, une demande de devis, <br>pour dire “bonjour”</span>... <br>N'hésitez pas !</span>
         <div class="contact__container">
@@ -584,26 +584,28 @@
             <div class="contact__form">
                 <img src="/contact1.a037f15b.png" alt="Julie en pleine médiation équine avec les ailes de Pégase" class="contact__form-background">
                 <div class="contact__form-content">
-                    <form action="">
+                    <form action="https://formspree.io/f/maykjqbk" method="POST">
                         <div class="form__inputs">
                             <div class="form__content">
-                                <input type="text" id="name" class="form__input" required="" placeholder=" ">
+                                <input name="Nom (ou société)" type="text" id="name" class="form__input" placeholder=" " required="">
                                 <label for="name" class="form__label">Votre nom, prénom ou société</label>
                             </div>
                             <div class="form__content">
-                                <input type="email" id="email" class="form__input" required="" placeholder=" ">
+                                <input name="Adresse email" type="email" id="email" class="form__input" placeholder=" " required="">
                                 <label for="email" class="form__label">Votre adresse email</label>
                             </div>
                             <div class="form__content">
-                                <input type="tel" id="phone" class="form__input" required="" placeholder=" ">
-                                <label for="phone" class="form__label">Votre numéro de téléphone</label>
+                                <input name="Numéro de téléphone" type="tel" id="tel" class="form__input" placeholder=" " required="">
+                                <label for="tel" class="form__label">Votre numéro de téléphone</label>
                             </div>
                             <div class="form__content form__area">
-                                <textarea name="" id="message" class="form__input" required="" placeholder=" "></textarea>
-                                <label for="message" class="form__label">Votre nom</label>
+                                <textarea name="Message (à rappeler lors de la réponse)" id="message" class="form__input" placeholder=" " required=""></textarea>
+                                <label for="message" class="form__label">Votre message</label>
                             </div>
                         </div>
-                        <button class="contact__form-button" type="submit" data-text="Envoyer"><span>Envoyer</span></button>
+                        <button class="contact__form-button" type="submit" data-text="Envoyer">
+                            <span>Envoyer</span>
+                        </button>
                     </form>
                 </div>
                 <div class="contact__form-img" style="background: url(&quot;contact1.a037f15b.png&quot;) center / cover no-repeat"></div>
@@ -611,7 +613,7 @@
         </div>
     </section>
     <!--FOOTER-->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <a class="footer__logo" href="#">
             <img src="/logo_txt.cf004f6f.png" alt="logo texte des ailes de Pégase">
         </a>
@@ -619,13 +621,13 @@
             <div class="footer__container-left">
                 <ul>
                     <li>
-                        <a href="#">À propos</a>
+                        <a href="#about">À propos</a>
                     </li>
                     <li>
-                        <a href="#">La Médiation</a>
+                        <a href="#step">La Médiation</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>

@@ -29,6 +29,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -139,6 +143,10 @@ ul {
 
 html, body {
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -246,7 +254,7 @@ ul {
   z-index: 99;
   background: #4f9c98;
   place-items: center;
-  display: none;
+  display: grid;
   position: fixed;
   inset: 0;
 }
@@ -293,23 +301,23 @@ ul {
 }
 
 .loader__images-img1 {
-  animation: 1s linear fade-in-out;
+  animation: .75s linear fade-in-out;
 }
 
 .loader__images-img2 {
-  animation: 1s linear 1.25s fade-in-out;
+  animation: .75s linear 1s fade-in-out;
 }
 
 .loader__images-img3 {
-  animation: 1s linear 2.5s fade-in-out;
+  animation: .75s linear 2s fade-in-out;
 }
 
 .loader__images-img4 {
-  animation: 1s linear 3.75s fade-in-out;
+  animation: .75s linear 3s fade-in-out;
 }
 
 .loader__images-img5 {
-  animation: 1s linear 5s fade-in-out;
+  animation: .75s linear 4s fade-in-out;
 }
 
 @keyframes fade-in-out {
@@ -373,6 +381,10 @@ ul {
 
 html, body {
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -711,6 +723,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -1007,6 +1023,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -1145,6 +1165,10 @@ ul {
 
 html, body {
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -1622,6 +1646,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -1730,6 +1758,7 @@ ul {
 .contact__title {
   color: #2b5553;
   text-align: center;
+  margin: 5rem 0 0;
   font-family: Spectral, serif;
   font-size: 57px;
   font-weight: 600;
@@ -1742,6 +1771,10 @@ ul {
 @media (max-width: 768px) {
   .contact__title br {
     display: block;
+  }
+
+  .contact__title {
+    margin: 0;
   }
 }
 
@@ -1999,6 +2032,10 @@ ul {
 
 html, body {
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -2342,6 +2379,10 @@ ul {
 
 html, body {
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
