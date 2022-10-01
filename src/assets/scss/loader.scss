@@ -74,11 +74,6 @@
       animation-delay: 5s;
     }
 
-    &-img6 {
-      animation: fade-in-out 1s linear;
-      animation-delay: 6.25s;
-    }
-
     @keyframes fade-in-out {
       0% {
         opacity: 0;

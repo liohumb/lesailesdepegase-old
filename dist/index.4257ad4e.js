@@ -565,8 +565,32 @@ let barInterval = setInterval(()=>{
             duration: .75,
             opacity: 0
         });
+        (0, _gsapDefault.default).to(".nav__bottom", {
+            duration: 4,
+            delay: 3,
+            bottom: 0
+        });
+        (0, _gsapDefault.default).to(".navSM", {
+            duration: 4,
+            delay: 3,
+            bottom: 0
+        });
     }
-}, 70);
+}, 50);
+/*  HOME VIDEO BACKGROUND  */ //force play
+const homeVideo = document.getElementById("home__video");
+//play even not load
+homeVideo.addEventListener("loadeddata", function() {
+    homeVideo.play();
+});
+//play even it's paused
+// homeVideo.addEventListener('pause', function () {
+//     homeVideo.play()
+// })
+//pause when ended
+homeVideo.addEventListener("ended", function() {
+    homeVideo.pause();
+});
 /*  NAVBAR BIG SCREEN  */ //select home section
 const home = document.querySelector(".home");
 //select navbar

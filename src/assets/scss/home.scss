@@ -1,5 +1,25 @@
 @import "style";
 
 .home {
-  background: $background-color;
+  display: grid;
+  place-items: center;
+
+  video {
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -20;
+
+    @media (max-width: 1024px) {
+      top: 70%;
+    }
+
+    @media (max-width: 768px) {
+      height: 100vh;
+      top: 50%;
+    }
+  }
 }
