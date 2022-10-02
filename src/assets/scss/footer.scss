@@ -106,20 +106,20 @@
         width: 100%;
         height: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         align-items: center;
 
         @media (max-width: 1024px) {
           width: auto;
           height: auto;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 2rem;
         }
 
         @media (max-width: 768px) {
           width: 100%;
           height: 100%;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(5, 1fr);
           gap: 0;
           justify-items: center;
         }
@@ -127,7 +127,7 @@
         @media (max-width: 320px) {
           width: auto;
           height: auto;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 2rem;
         }
 
@@ -150,11 +150,32 @@
             &:hover {
               transform: scale(1.2);
             }
+
+            img {
+              width: 60%;
+              filter: invert(1);
+            }
           }
 
           &:hover {
             background: $first-color;
           }
+        }
+      }
+
+      &Logo {
+        display: none;
+
+        @media (max-width: 1024px) {
+          display: block;
+        }
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+
+        @media (max-width: 320px) {
+          display: block;
         }
       }
     }
