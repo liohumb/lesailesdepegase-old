@@ -39,13 +39,13 @@
       position: absolute;
       width: 150px;
       top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
       opacity: 0;
 
       @media (max-width: 768px) {
         width: 100px;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
       }
     }
 

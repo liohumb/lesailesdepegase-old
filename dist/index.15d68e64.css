@@ -291,14 +291,14 @@ ul {
   opacity: 0;
   position: absolute;
   top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {
   .loader__images-img {
     width: 100px;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 
@@ -2615,10 +2615,6 @@ ul {
     left: 50%;
     transform: translateX(-50%);
   }
-
-  .modal__about-button:hover {
-    transform: translateX(-50%)scale(1.1);
-  }
 }
 
 @media (max-width: 375px) {
@@ -2634,6 +2630,12 @@ ul {
 
 .modal__about-button:hover {
   transform: translateX(0%)scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .modal__about-button:hover {
+    transform: translateX(-50%)scale(1.1);
+  }
 }
 
 .modal__about-button:hover span {
@@ -2689,6 +2691,7 @@ ul {
 @media (max-width: 768px) {
   .modal__about-buttonClose {
     font-size: 30px;
+    left: 0;
   }
 
   .modal__about-buttonClose span {
