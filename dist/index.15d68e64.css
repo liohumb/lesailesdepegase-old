@@ -283,7 +283,7 @@ ul {
   width: 100%;
   place-items: center;
   display: grid;
-  right: 50%;
+  left: 50%;
 }
 
 .loader__images-img {
