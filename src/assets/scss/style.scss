@@ -148,3 +148,13 @@ ul {
   font-size: 12px;
   z-index: 10;
 }
+
+.form__error {
+  display: grid;
+  place-items: center;
+  font-family: $secondary-font;
+  font-size: 20px;
+  text-align: center;
+  color: #D0342C;
+  padding: 0 0 1.5rem 0;
+}

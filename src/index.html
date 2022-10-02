@@ -172,7 +172,7 @@
             <source src="assets/videos/home/background.mp4" type="video/mp4">
         </video>
         <!--background image-->
-        <img src="assets/images/home/logo.png" alt="Logo des ailes de Pégase">
+        <img src="assets/images/home/logo.png" alt="Logo des ailes de Pégase" class="home__background">
     </section>
     <!--ABOUT-->
     <section class="about" id="about">
@@ -649,7 +649,8 @@
                 <img src="assets/images/contact/contact1.png" alt="Julie en pleine médiation équine avec les ailes de Pégase" class="contact__form-background">
                 <div class="contact__form-content">
                     <form action="https://formspree.io/f/maykjqbk"
-                          method="POST">
+                          method="POST"
+                          class="form">
                         <div class="form__inputs">
                             <div class="form__content">
                                 <input name="Nom (ou société)"
@@ -687,6 +688,7 @@
                                 <label for="message" class="form__label">Votre message</label>
                             </div>
                         </div>
+                        <span class="form__error"></span>
                         <button class="contact__form-button"
                                 type="submit"
                                 data-text="Envoyer">

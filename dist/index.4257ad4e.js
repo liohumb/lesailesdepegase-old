@@ -726,6 +726,38 @@ modalBunnyBtn.addEventListener("click", function() {
 modalBunnyClose.addEventListener("click", function() {
     modalBunny.classList.remove("modal__bunny-active");
 });
+/*  FORM CONTACT  */ const form = document.querySelector(".form");
+form.addEventListener("submit", function(e) {
+    const formName = document.getElementById("name");
+    const formEmail = document.getElementById("email");
+    const formTel = document.getElementById("tel");
+    const formMessage = document.getElementById("message");
+    const formNameRegExp = /^[a-zA-Z0-9-éÉèÈçÇàÀ^¨ù`\s]+$/;
+    const formEmailRegExp = /^[a-z0-9-_.]+@[a-z0-9]+\.[a-z]{2,4}$/;
+    const formTelRegExp = /^[0-9+]{8,12}$/;
+    const formMessageRegExp = /^[a-zA-Z0-9-_,?;.:/=+ù%^¨$*€`&é"'(è!çà)ÉÈÇÀ•@#\s]+$/;
+    let formError = document.querySelector(".form__error");
+    //input name
+    if (formNameRegExp.test(formName.value) === false) {
+        formError.innerHTML = "Certains caract\xe8res ne sont pas autoriser dans le champ nom.";
+        e.preventDefault();
+    }
+    //input email
+    if (formEmailRegExp.test(formEmail.value) === false) {
+        formError.innerHTML = "Votre adresse email n'est pas valide.";
+        e.preventDefault();
+    }
+    //input tel
+    if (formTelRegExp.test(formTel.value) === false) {
+        formError.innerHTML = "Votre num\xe9ro de t\xe9l\xe9phone n'est pas valide.";
+        e.preventDefault();
+    }
+    //input message
+    if (formMessageRegExp.test(formMessage.value) === false) {
+        formError.innerHTML = "Certains caract\xe8res ne sont pas autoriser dans le champ message.";
+        e.preventDefault();
+    }
+});
 
 },{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./swiper-bundle.min.js":"lbaA8"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
