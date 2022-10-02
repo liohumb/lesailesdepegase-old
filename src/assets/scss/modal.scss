@@ -315,16 +315,12 @@
 
     @media (max-width: 768px) {
       top: 7%;
-      left: 0;
+      left: -2%;
       font-size: 27px;
 
       span {
         display: none;
       }
-    }
-
-    @media (max-width: 475px) {
-      left: 0;
     }
   }
 
