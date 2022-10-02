@@ -2611,6 +2611,9 @@ ul {
   .modal__about-button {
     padding: 0;
     font-size: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
