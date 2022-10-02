@@ -571,8 +571,8 @@ let barInterval = setInterval(()=>{
             bottom: 0
         });
         (0, _gsapDefault.default).to(".navSM", {
-            duration: 4,
-            delay: 3,
+            duration: 3,
+            delay: .5,
             bottom: 0
         });
     }

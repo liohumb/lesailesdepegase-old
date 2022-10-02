@@ -18,8 +18,27 @@
     }
 
     @media (max-width: 768px) {
-      height: 100vh;
-      top: 50%;
+      display: none;
+    }
+  }
+
+  img {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+      transform: scale(.5);
+      animation: imgZoom 4s forwards;
+      animation-delay: 4s;
+
+      @keyframes imgZoom {
+        0% {
+          transform: scale(.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
     }
   }
 }

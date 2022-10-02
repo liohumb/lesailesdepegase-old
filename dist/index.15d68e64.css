@@ -1151,8 +1151,29 @@ ul {
 
 @media (max-width: 768px) {
   .home video {
-    height: 100vh;
-    top: 50%;
+    display: none;
+  }
+}
+
+.home img {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .home img {
+    animation: 4s 4s forwards imgZoom;
+    display: block;
+    transform: scale(.5);
+  }
+
+  @keyframes imgZoom {
+    0% {
+      transform: scale(.5);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
 }
 
