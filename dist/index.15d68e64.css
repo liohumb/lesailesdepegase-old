@@ -2617,11 +2617,7 @@ ul {
   }
 
   .modal__about-button:hover {
-    transform: scale(1);
-  }
-
-  .modal__about-button:hover span {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(-50%)scale(1.1);
   }
 }
 
@@ -2637,7 +2633,7 @@ ul {
 }
 
 .modal__about-button:hover {
-  transform: scale(1.1);
+  transform: translateX(0%)scale(1.1);
 }
 
 .modal__about-button:hover span {

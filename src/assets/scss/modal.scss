@@ -24,7 +24,7 @@
     padding: 0;
 
     &:hover {
-      transform: translateX(-50%);
+      transform: translateX(-50%) scale(1.1);
     }
   }
 
@@ -38,7 +38,7 @@
   }
 
   &:hover {
-    transform: scale(1.1);
+    transform: translateX(0%) scale(1.1);
   }
 
   &:hover span {
