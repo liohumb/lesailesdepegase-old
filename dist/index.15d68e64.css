@@ -1373,7 +1373,7 @@ ul {
   position: absolute;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .step__content .video1, .step__content .video2, .step__content .video3, .step__content .video4, .step__content .video5, .step__content .video6, .step__content .video7, .step__content .video8, .step__content .video9 {
     display: none;
   }
