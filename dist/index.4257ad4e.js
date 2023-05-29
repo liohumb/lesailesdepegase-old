@@ -759,7 +759,7 @@ form.addEventListener("submit", function(e) {
     }
 });
 
-},{"gsap":"fPSuC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./swiper-bundle.min.js":"lbaA8"}],"fPSuC":[function(require,module,exports) {
+},{"gsap":"fPSuC","./swiper-bundle.min.js":"lbaA8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPSuC":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "gsap", ()=>gsapWithCSS);

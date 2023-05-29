@@ -97,6 +97,7 @@
   }
 
   &__infos {
+    position: relative;
     width: 100%;
     padding: 0 3rem 0 0;
     margin: -4rem 0 0 0;
@@ -114,6 +115,10 @@
       font-size: 22px;
       font-weight: 500;
       color: $background-color;
+      
+      & a {
+        border-bottom: .1rem solid white;
+      }
     }
   }
 
